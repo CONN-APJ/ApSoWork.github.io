@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #bigcontainer {
+            display: flex;
+            flex-direction: column;
+            background-color: powderblue; /* Change the container color to powder blue */
+            width: 808px; /* Adjusted width to include padding on both sides */
+            margin: auto;
+            margin-top: 10px;
+            border: 3px solid green;
+            overflow: hidden;
+            padding-left: 28px; /* Added padding on the left side */
+            padding-right: 28px; /* Added padding on the right side */
+        }
+
+        .staintwo {
+            width: 752px; /* Converted 7.85 inches to pixels (assuming 1 inch = 96 pixels) */
+            height: 37.8px;
+            margin-bottom: 9.45px;
+            border: 2px solid transparent;
+            background-color: transparent;
+            animation-name: circles;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+            animation-timing-function: linear;
+            box-sizing: border-box;
+        }
+
+        .staintwo:nth-child(1) {
+            background-color: green;
+        }
+
+        .staintwo:nth-child(2) {
+            background-color: brown;
+        }
+
+        .staintwo:nth-child(3) {
+            background-color: blue;
+        }
+
+        .staintwo:nth-child(4) {
+            background-color: yellow;
+        }
+
+        .staintwo:nth-child(5) {
+            background-color: goldenrod;
+        }
+
+        .staintwo:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes circles {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.5); }
+        }
+    </style>
+</head>
+<body>
+    <div id="bigcontainer">
+        <!-- Original 5 bars -->
+        <div class="staintwo"></div>
+        <div class="staintwo"></div>
+        <div class="staintwo"></div>
+        <div class="staintwo"></div>
+        <div class="staintwo"></div>
+
+        <!-- Add 5 more bars with the same colors as the original ones -->
+        <div class="staintwo" style="background-color: green;"></div>
+        <div class="staintwo" style="background-color: brown;"></div>
+        <div class="staintwo" style="background-color: blue;"></div>
+        <div class="staintwo" style="background-color: yellow;"></div>
+        <div class="staintwo" style="background-color: goldenrod;"></div>
+    </div>
+</body>
+</html>
